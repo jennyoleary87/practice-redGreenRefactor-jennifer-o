@@ -26,3 +26,12 @@ efficiency, or maintainability. Propose specific refactoring steps and
 explain how they improve the implementation.
 ○ Reflect on why this step is critical for long-term project success.
 */
+
+function countVowels(str) {
+    if (str === undefined) {
+        str = "s";
+    }
+    return "This is a vowel: ," + str;
+}
+
+module.exports = countVowels;
