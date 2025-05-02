@@ -28,10 +28,14 @@ explain how they improve the implementation.
 */
 
 function countVowels(str) {
-    if (str === undefined) {
-        str = "s";
-    }
-    return "This is a vowel: ," + str;
+    let count = 0; // start from scratch
+    const char = str.toLowerCase().split(''); // turn all characters lowercase and split to better compare
+    char.forEach(char => {
+        if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') { // if character is a OR e OR i OR o OR u
+            count++; // increment count of vowels
+        }
+    });
+    return count;
 }
 
 module.exports = countVowels;
